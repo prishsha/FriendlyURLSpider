@@ -1,0 +1,106 @@
+.vuln-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.vuln-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  cursor: pointer;
+  user-select: none;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.vuln-card-header:hover { background: var(--bg); }
+
+.vuln-card-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vuln-card-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.vuln-card-count {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.vuln-card-toggle {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.vuln-card-body {
+  padding: 12px 14px;
+}
+
+.vuln-findings {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.vuln-finding-item {
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+/* Explain section */
+.vuln-explain {}
+
+.explain-toggle {
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: var(--primary);
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.explain-content {
+  background: #f8faff;
+  border: 1px solid #dbeafe;
+  border-radius: var(--radius);
+  padding: 12px;
+  font-size: 12px;
+}
+
+.explain-section {
+  margin-bottom: 10px;
+}
+
+.explain-section:last-of-type { margin-bottom: 0; }
+
+.explain-section strong {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #1d4ed8;
+  margin-bottom: 3px;
+}
+
+.explain-section p {
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.explain-ref {
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+}
