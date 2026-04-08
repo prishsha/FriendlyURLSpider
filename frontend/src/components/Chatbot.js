@@ -74,7 +74,7 @@ function Chatbot({ jobId }) {
       {open && (
         <div className="chat-window">
           <div className="chat-header">
-            <span>🕷 WebSpidey Assistant</span>
+            <span>Chatbot</span>
             <button className="chat-close" onClick={() => setOpen(false)}>✕</button>
           </div>
 

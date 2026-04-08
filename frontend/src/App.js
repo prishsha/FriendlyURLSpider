@@ -50,11 +50,8 @@ function App() {
       <header className="app-header">
         <div className="header-inner">
           <div className="logo">
-            <span className="logo-text">WebSpidey</span>
+            <span className="logo-text">Web App Vulnerability Scanner</span>
           </div>
-          <nav className="header-nav">
-            <span className="nav-tag">Web Vulnerability Scanner</span>
-          </nav>
         </div>
       </header>
 

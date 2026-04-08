@@ -46,6 +46,20 @@ function ScanForm({ onScan }) {
         </div>
         {error && <div className="scan-error">{error}</div>}
       </form>
+
+      <div className="example-urls">
+        <span className="example-label">Try:</span>
+        {EXAMPLE_URLS.map((u) => (
+          <button
+            key={u}
+            className="example-url-btn"
+            onClick={() => setUrl(u)}
+            type="button"
+          >
+            {u}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

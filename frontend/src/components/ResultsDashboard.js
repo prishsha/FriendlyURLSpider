@@ -64,7 +64,7 @@ function ResultsDashboard({ results, urls, targetUrl, jobId, onReset }) {
         </div>
         <div className="dashboard-actions">
           <a
-            href={`/api/pdf/${jobId}`}
+            href={`http://localhost:5000/api/pdf/${jobId}`}
             target="_blank"
             rel="noreferrer"
             className="btn-secondary"
