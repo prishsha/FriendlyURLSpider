@@ -24,6 +24,9 @@ from services.explainer import explain_vulnerability
 from services.pdf_generator import generate_pdf_bytes
 from services.chatbot import chatbot_reply
 
+from dotenv import load_dotenv
+load_dotenv()
+
 app = Flask(__name__)
 app.secret_key = "webspidey_v2_secret"
 CORS(app, supports_credentials=True, origins=["http://localhost:3000"])
