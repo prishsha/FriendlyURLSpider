@@ -8,6 +8,7 @@ from flask_cors import CORS
 import threading
 import uuid
 import time
+import os
 
 from crawler import crawl
 from scanners.sql_scanner import scan_sql_injection
@@ -28,8 +29,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-app.secret_key = "webspidey_v2_secret"
-CORS(app, supports_credentials=True, origins=["http://localhost:3000"])
+app.secret_key = os.getenv("SECRET_KEY", "webspidey_v2_secret")
+FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
+CORS(app, supports_credentials=True, origins=[FRONTEND_URL])
 
 # In-memory store for scan jobs (simple approach, no Redis needed)
 scan_jobs = {}

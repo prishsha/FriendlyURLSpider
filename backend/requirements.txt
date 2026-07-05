@@ -3,3 +3,6 @@ flask-cors
 requests
 beautifulsoup4
 reportlab
+python-dotenv
+gunicorn
+google-genai

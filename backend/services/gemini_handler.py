@@ -1,7 +1,7 @@
 import os
-import google.generativeai as genai
+from google import genai
 
-MODEL_NAME = "gemini-1.5-flash"
+MODEL_NAME = "gemini-2.5-flash"
 DEFAULT_API_KEY = os.getenv("GEMINI_API_KEY")
 
 
@@ -15,10 +15,12 @@ def ask_gemini(message, user_api_key=None):
         }
 
     try:
-        genai.configure(api_key=api_key)
+        client = genai.Client(api_key=api_key)
 
-        model = genai.GenerativeModel(MODEL_NAME)
-        response = model.generate_content(message)
+        response = client.models.generate_content(
+            model=MODEL_NAME,
+            contents=message
+        )
 
         return {
             "needs_api_key": False,
