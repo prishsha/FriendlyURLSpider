@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { API_URL } from "../config";
 import "./ScanProgress.css";
 
 function ScanProgress({ jobId, targetUrl, onComplete, onError }) {
@@ -11,7 +12,7 @@ function ScanProgress({ jobId, targetUrl, onComplete, onError }) {
 
     const interval = setInterval(async () => {
       try {
-        const res = await fetch(`/api/scan/${jobId}`);
+        const res = await fetch(`${API_URL}/api/scan/${jobId}`);
         const data = await res.json();
 
         setProgress(data.progress || 0);

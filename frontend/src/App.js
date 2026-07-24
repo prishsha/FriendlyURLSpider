@@ -3,6 +3,7 @@ import ScanForm from "./components/ScanForm";
 import ScanProgress from "./components/ScanProgress";
 import ResultsDashboard from "./components/ResultsDashboard";
 import Chatbot from "./components/Chatbot";
+import { API_URL } from "./config";
 import "./App.css";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     setResults(null);
 
     try {
-      const res = await fetch("/api/scan", {
+      const res = await fetch(`${API_URL}/api/scan`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),

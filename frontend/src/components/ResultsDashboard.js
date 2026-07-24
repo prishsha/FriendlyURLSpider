@@ -1,5 +1,6 @@
 import { useState } from "react";
 import VulnCard from "./VulnCard";
+import { API_URL } from "../config";
 import "./ResultsDashboard.css";
 
 function RiskMeter({ score, level }) {
@@ -64,7 +65,7 @@ function ResultsDashboard({ results, urls, targetUrl, jobId, onReset }) {
         </div>
         <div className="dashboard-actions">
           <a
-            href={`http://localhost:5000/api/pdf/${jobId}`}
+            href={`${API_URL}/api/pdf/${jobId}`}
             target="_blank"
             rel="noreferrer"
             className="btn-secondary"
